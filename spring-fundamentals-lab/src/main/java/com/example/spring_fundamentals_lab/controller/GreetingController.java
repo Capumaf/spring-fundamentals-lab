@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.*;
 public class GreetingController {
 
     @GetMapping
-    public String sayHello() {
+    public String hello() {
         return "Hello World!";
     }
 
     @GetMapping("/{name}")
-    public String greetName(@PathVariable String name) {
+    public String helloName(@PathVariable String name) {
         return "Hello " + name + "!";
     }
 

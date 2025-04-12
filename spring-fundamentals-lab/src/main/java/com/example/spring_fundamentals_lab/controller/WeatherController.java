@@ -18,26 +18,25 @@ public class WeatherController {
 
     @GetMapping("/temperature")
     public String getTemperature() {
-        return "Temperature: " + weatherService.getCurrentTemperature() + "°C";
+        return "Temperature: " + weatherService.getTemperature() + "°C";
     }
 
     @GetMapping("/condition")
     public String getCondition() {
-        return "Condition: " + weatherService.getWeatherCondition();
+        return "Condition: " + weatherService.getCondition();
     }
 
     @GetMapping("/wind")
-    public String getWind() {
+    public String getWindSpeed() {
         return "Wind Speed: " + weatherService.getWindSpeed() + " km/h";
     }
 
     @GetMapping("/all")
     public Map<String, Object> getAllWeather() {
-        Map<String, Object> weather = new HashMap<>();
-        weather.put("temperature", weatherService.getCurrentTemperature());
-        weather.put("condition", weatherService.getWeatherCondition());
-        weather.put("windSpeed", weatherService.getWindSpeed());
-        return weather;
+        Map<String, Object> data = new HashMap<>();
+        data.put("temperature", weatherService.getTemperature());
+        data.put("condition", weatherService.getCondition());
+        data.put("windSpeed", weatherService.getWindSpeed());
+        return data;
     }
 }
-
