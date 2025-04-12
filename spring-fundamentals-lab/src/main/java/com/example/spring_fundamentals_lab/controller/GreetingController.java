@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.*;
 public class GreetingController {
 
     @GetMapping
-    public String sayHello() {
+    public String hello() {
         return "Hello World!";
     }
 
     @GetMapping("/{name}")
-    public String greetName(@PathVariable String name) {
+    public String helloName(@PathVariable String name) {
         return "Hello " + name + "!";
     }
 
@@ -25,6 +25,5 @@ public class GreetingController {
     public String multiply(@PathVariable int num1, @PathVariable int num2) {
         return "Product: " + (num1 * num2);
     }
-}    // Small change to trigger pull request
-
+}
 
