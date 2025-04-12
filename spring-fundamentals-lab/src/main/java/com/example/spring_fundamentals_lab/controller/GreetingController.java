@@ -25,5 +25,6 @@ public class GreetingController {
     public String multiply(@PathVariable int num1, @PathVariable int num2) {
         return "Product: " + (num1 * num2);
     }
-}
+}    // Small change to trigger pull request
+
 
